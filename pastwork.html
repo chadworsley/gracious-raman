@@ -38,9 +38,29 @@
 			
 		img {
 		  width: 100%;
+		  max-width: 700px;
+		  height: auto;
 		}
 
-                span {
+		.container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+        span {
 		  font-family: cooper-black-std;
 		  font-size: 25px;
 		}
@@ -120,7 +140,7 @@
 
 		<h1 id="top of the page" style="text-align:center;font-family:cooper-black-std;font-size:65px;">Chad Worsley<span>Music Producer/Artist</span></h1>
 		<a href="https://open.spotify.com/artist/4otshZ0Gu1Ld5GWdxIDoru?si=LWLNKSBFQ-aEf-JmELyGlw" target="_blank">
-		  <img class="spotifyicon" src="SpotifyIconGreen.png" alt="Spotify Icon Green" style="width:30px;height:30px;">
+		    <img class="spotifyicon" src="SpotifyIconGreen.png" alt="Spotify Icon Green" style="width:30px;height:30px;">
 		</a>
 		<a href="https://vimeo.com/user115304687" target="_blank">
 		  <img class="vimeoicon" src="VimeoIconBlue.png" alt="Vimeo Icon Blue" style="width:30px;height:30px;">
@@ -155,7 +175,9 @@
 
 		   <h3 style="font-family: tahoma;">Chad Worsley - Went to a Party b/w Living on This Island</h3>
 		   <a href="https://open.spotify.com/album/3afVXIksMKfufN1kJHAGqh" target="_blank">
-		   <img src="GIF(Optimized).gif" alt="Chad Worsley - Went to a Party album gif" style="width:492px;height:500px;">
+		   <div class="img-wrap"> 
+		     <img src="GIF(Optimized).gif" alt="Chad Worsley - Went to a Party album gif" style="width:492px;height:500px;">
+		   </div>
 		   </a>
 
 		<div class="a">
@@ -168,9 +190,11 @@
 		<br>	
 
 		<div class="wrapper">
-		   <h3 style="font-family: tahoma;">Gobjaw Zine: Chad Worsley - You Think You Need a Job</h3>
-		   <img src="youthinkyouneedajobspread.png" alt="Picture of 'You Think You Need a Job' magazine spread" style="width:716px;height:500px;">
-		  
+		   
+		<h3 style="font-family: tahoma;">Gobjaw Zine: Chad Worsley - You Think You Need a Job</h3>
+		<div class="img-wrap">
+		  <img src="youthinkyouneedajobspread.png" alt="Picture of 'You Think You Need a Job' magazine spread" style="width:716px;height:500px;">
+		</div>
 		<div class="a">
 		   <p style="font-family: tahoma;">A poem read at <a href="https://www.instagram.com/gobjawpoetry/" target="_blank"> Gobjaw</a> poetry night, illustrated by <a href="https://www.instagram.com/franksillustrations/" target="_blank"> Frank Morris</a> and publised by 
 		   <a href="https://spunpress.com/" target="_blank">Spunpress</a>. Big thanks to the Marta and Lewie for the nights.</p>
@@ -181,10 +205,9 @@
 		<div class="wrapper">
 		   <h3 style="font-family: tahoma;">BEACH</h3>
 		   <iframe src="https://player.vimeo.com/video/240513064" width="640" height="283" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
 		<div class="a">
 		   <p style="font-family: tahoma;">BEACH is a short film made as part of The 48 Hour Film Project, an event in which 
-		   you and your team has 48 hours to make a film from script to finished product. It was a long 48 hours but a right pleasure.
+		   you and your team have 48 hours to make a film from script to finished product. It was a long 48 hours but a right pleasure.
 		   Rather unwittingly for the team we won a lot of awards for it, I've got the official prize mug to prove it.</p>
 		</div>	
 
